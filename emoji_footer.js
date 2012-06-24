@@ -6,6 +6,7 @@ function unifiedToHTML(text) {
     return '<span class="emoji emoji' + em[2] + '" title="' + em[1] + '"></span>';
   });
 }
+jEmoji.unifiedToHTML = unifiedToHTML;
 
 var EMOJI_DOCOMO_MAP = {};
 var EMOJI_KDDI_MAP = {};
@@ -33,21 +34,27 @@ function docomoToUnified(text) {
     return EMOJI_DOCOMO_MAP[m];
   });
 }
+jEmoji.docomoToUnified = docomoToUnified;
 
 function kddiToUnified(text) {
   return text.replace(EMOJI_KDDI_RE, function (_, m) {
     return EMOJI_KDDI_MAP[m];
   });
 }
+jEmoji.kddiToUnified = kddiToUnified;
 
 function softbankToUnified(text) {
   return text.replace(EMOJI_SOFTBANK_RE, function (_, m) {
     return EMOJI_SOFTBANK_MAP[m];
   });
 }
+jEmoji.softbankToUnified = softbankToUnified;
 
 function googleToUnified(text) {
   return text.replace(EMOJI_GOOGLE_RE, function (_, m) {
     return EMOJI_GOOGLE_MAP[m];
   });
 }
+jEmoji.googleToUnified = googleToUnified;
+
+})();

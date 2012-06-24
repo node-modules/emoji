@@ -1,9 +1,24 @@
-// Auto create by `bin/create_emoji_js.py`
+/*!
+ * emoji
+ *
+ * This file auto create by `bin/create_emoji_js.py`.
+ * Emoji\'s table come from <a href="http://code.iamcal.com/php/emoji/">http://code.iamcal.com/php/emoji/</a>
+ * 
+ * Copyright(c) 2012 fengmk2 <fengmk2@gmail.com>
+ * MIT Licensed
+ */
 
-// Emoji's table come from <a href="http://code.iamcal.com/php/emoji/">http://code.iamcal.com/php/emoji/</a>
+(function () {
 
+var jEmoji = {};
+if (typeof module === 'undefined') {
+  window.jEmoji = jEmoji;
+} else {
+  module.exports = jEmoji;
+}
+
+// Unified: [unified_unicode, title, classname, DoCoMo, KDDI, Softbank, Google]'
 var EMOJI_MAP = {
-  // Unified: [unified_unicode, title, classname, DoCoMo, KDDI, Softbank, Google]
   "☀": ["U+2600", "black sun with rays", "2600", ["", "U+E63E"], ["", "U+E488"], ["", "U+E04A"], ["󾀀", "U+FE000"]],
   "☁": ["U+2601", "cloud", "2601", ["", "U+E63F"], ["", "U+E48D"], ["", "U+E049"], ["󾀁", "U+FE001"]],
   "☔": ["U+2614", "umbrella with rain drops", "2614", ["", "U+E640"], ["", "U+E48C"], ["", "U+E04B"], ["󾀂", "U+FE002"]],
@@ -737,6 +752,7 @@ function unifiedToHTML(text) {
     return '<span class="emoji emoji' + em[2] + '" title="' + em[1] + '"></span>';
   });
 }
+jEmoji.unifiedToHTML = unifiedToHTML;
 
 var EMOJI_DOCOMO_MAP = {};
 var EMOJI_KDDI_MAP = {};
@@ -764,21 +780,27 @@ function docomoToUnified(text) {
     return EMOJI_DOCOMO_MAP[m];
   });
 }
+jEmoji.docomoToUnified = docomoToUnified;
 
 function kddiToUnified(text) {
   return text.replace(EMOJI_KDDI_RE, function (_, m) {
     return EMOJI_KDDI_MAP[m];
   });
 }
+jEmoji.kddiToUnified = kddiToUnified;
 
 function softbankToUnified(text) {
   return text.replace(EMOJI_SOFTBANK_RE, function (_, m) {
     return EMOJI_SOFTBANK_MAP[m];
   });
 }
+jEmoji.softbankToUnified = softbankToUnified;
 
 function googleToUnified(text) {
   return text.replace(EMOJI_GOOGLE_RE, function (_, m) {
     return EMOJI_GOOGLE_MAP[m];
   });
 }
+jEmoji.googleToUnified = googleToUnified;
+
+})();

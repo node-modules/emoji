@@ -9,8 +9,6 @@
 </head>
 <body>
 <div class="emojstext">
-口口口口口口口
-󾀀
 // Auto create by `bin/create_emoji_js.py`
 
 // Emoji's table come from <a href="http://code.iamcal.com/php/emoji/">http://code.iamcal.com/php/emoji/</a>
@@ -741,20 +739,17 @@ var EMOJI_MAP = {
   "👎": ["U+1F44E", "thumbs down sign", "1f44e", ["", "U+E700"], ["", "U+EAD5"], ["", "U+E421"], ["󾮠", "U+FEBA0"]],
   "👐": ["U+1F450", "open hands sign", "1f450", ["", "U+E695"], ["", "U+EAD6"], ["", "U+E422"], ["󾮡", "U+FEBA1"]]
 };
-
-var EMOJI_RE = new RegExp('(' + Object.keys(EMOJI_MAP).join('|') + ')', 'g');
-
 </div>
 
 <script>
 $(function () {
   var $text = $('.emojstext');
   var html = $text.html().trim().replace(/\n/g, '<br/>');
-  html = softbankToUnified(html);
-  html = googleToUnified(html);
-  html = docomoToUnified(html);
-  html = kddiToUnified(html);
-  $text.html(unifiedToHTML(html));
+  html = jEmoji.softbankToUnified(html);
+  html = jEmoji.googleToUnified(html);
+  html = jEmoji.docomoToUnified(html);
+  html = jEmoji.kddiToUnified(html);
+  $text.html(jEmoji.unifiedToHTML(html));
 });
 </script>
 </body>

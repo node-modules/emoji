@@ -3,12 +3,33 @@ emoji
 
 ## Usage
 
+### Browser
+
 see [demo.html](http://fengmk2.github.com/emoji/)
+
+```html
+<link href="./emoji.css" rel="stylesheet" type="text/css" />
+<script src="./jquery.js"></script>
+<script src="./emoji.js"></script>
+```
 
 ```js
 var $text = $('.emojstext');
 var html = $text.html().trim().replace(/\n/g, '<br/>');
-$text.html(unifiedToHTML(html));
+$text.html(jEmoji.unifiedToHTML(html));
+```
+
+### Nodejs
+
+#### Install
+
+```sh
+$ npm install emoji
+```
+
+```js
+var emoji = require('emoji');
+console.log('😜', emoji.unifiedToHTML('😜'));
 ```
 
 ## Sync data

@@ -10,9 +10,7 @@ d = pq(open('./table.htm', 'rb').read())
 
 tr = d('table tr')
 
-content = u'// Auto create by `bin/create_emoji_js.py`\n\n' \
- + '// Emoji\'s table come from <a href="http://code.iamcal.com/php/emoji/">http://code.iamcal.com/php/emoji/</a>\n\n' \
- + u'var EMOJI_MAP = {\n  // Unified: [unified_unicode, title, classname, DoCoMo, KDDI, Softbank, Google]\n'
+content = open('emoji_header.js', 'rb').read().decode('utf-8')
 
 for tre in tr[1:]:
     tds = pq(tre)('td')
@@ -50,7 +48,7 @@ for tre in tr[1:]:
 
 content = content[:-2] + u'\n};\n\n'
 
-content += open('emoji_tpl.js', 'rb').read().decode('utf-8')
+content += open('emoji_footer.js', 'rb').read().decode('utf-8')
 
 f = open('emoji.js', 'wb')
 f.write(content.encode('utf-8'))
