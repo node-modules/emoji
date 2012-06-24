@@ -1,4 +1,4 @@
-var EMOJI_RE = new RegExp('(' + Object.keys(EMOJI_MAP).join('|') + ')', 'g');
+var EMOJI_RE = null;
 
 /**
  * Convert unified code to HTML.
@@ -7,6 +7,9 @@ var EMOJI_RE = new RegExp('(' + Object.keys(EMOJI_MAP).join('|') + ')', 'g');
  * @return {String} html with emoji classname.
  */
 function unifiedToHTML(text) {
+  if (!EMOJI_RE) {
+    EMOJI_RE = new RegExp('(' + Object.keys(EMOJI_MAP).join('|') + ')', 'g');
+  }
   return text.replace(EMOJI_RE, function (_, m) {
     var em = EMOJI_MAP[m];
     return '<span class="emoji emoji' + em[2] + '" title="' + em[1] + '"></span>';
@@ -30,11 +33,7 @@ for (var k in EMOJI_MAP) {
   }
 }
 
-var EMOJI_DOCOMO_RE = new RegExp('(' + Object.keys(EMOJI_DOCOMO_MAP).join('|') + ')', 'g');
-var EMOJI_KDDI_RE = new RegExp('(' + Object.keys(EMOJI_KDDI_MAP).join('|') + ')', 'g');
-var EMOJI_SOFTBANK_RE = new RegExp('(' + Object.keys(EMOJI_SOFTBANK_MAP).join('|') + ')', 'g');
-var EMOJI_GOOGLE_RE = new RegExp('(' + Object.keys(EMOJI_GOOGLE_MAP).join('|') + ')', 'g');
-
+var EMOJI_DOCOMO_RE = null;
 /**
  * Convert DoCoMo code to Unified code.
  *
@@ -42,12 +41,16 @@ var EMOJI_GOOGLE_RE = new RegExp('(' + Object.keys(EMOJI_GOOGLE_MAP).join('|') +
  * @return {String}
  */
 function docomoToUnified(text) {
+  if (!EMOJI_DOCOMO_RE) {
+    EMOJI_DOCOMO_RE = new RegExp('(' + Object.keys(EMOJI_DOCOMO_MAP).join('|') + ')', 'g');
+  }
   return text.replace(EMOJI_DOCOMO_RE, function (_, m) {
     return EMOJI_DOCOMO_MAP[m];
   });
 }
 jEmoji.docomoToUnified = docomoToUnified;
 
+var EMOJI_KDDI_RE = null;
 /**
  * Convert KDDI code to Unified code.
  *
@@ -55,12 +58,16 @@ jEmoji.docomoToUnified = docomoToUnified;
  * @return {String}
  */
 function kddiToUnified(text) {
+  if (!EMOJI_KDDI_RE) {
+    EMOJI_KDDI_RE = new RegExp('(' + Object.keys(EMOJI_KDDI_MAP).join('|') + ')', 'g')
+  }
   return text.replace(EMOJI_KDDI_RE, function (_, m) {
     return EMOJI_KDDI_MAP[m];
   });
 }
 jEmoji.kddiToUnified = kddiToUnified;
 
+var EMOJI_SOFTBANK_RE = null;
 /**
  * Convert SoftBank code to Unified code.
  *
@@ -68,12 +75,16 @@ jEmoji.kddiToUnified = kddiToUnified;
  * @return {String}
  */
 function softbankToUnified(text) {
+  if (!EMOJI_SOFTBANK_RE) {
+    EMOJI_SOFTBANK_RE = new RegExp('(' + Object.keys(EMOJI_SOFTBANK_MAP).join('|') + ')', 'g')
+  }
   return text.replace(EMOJI_SOFTBANK_RE, function (_, m) {
     return EMOJI_SOFTBANK_MAP[m];
   });
 }
 jEmoji.softbankToUnified = softbankToUnified;
 
+var EMOJI_GOOGLE_RE = null;
 /**
  * Convert Google code to Unified code.
  *
@@ -81,6 +92,9 @@ jEmoji.softbankToUnified = softbankToUnified;
  * @return {String}
  */
 function googleToUnified(text) {
+  if (!EMOJI_GOOGLE_RE) {
+    EMOJI_GOOGLE_RE = new RegExp('(' + Object.keys(EMOJI_GOOGLE_MAP).join('|') + ')', 'g')
+  }
   return text.replace(EMOJI_GOOGLE_RE, function (_, m) {
     return EMOJI_GOOGLE_MAP[m];
   });
