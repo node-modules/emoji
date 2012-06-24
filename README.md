@@ -3,7 +3,7 @@ emoji
 
 ## Usage
 
-see `demo.html`
+see [demo.html](http://fengmk2.github.com/emoji/)
 
 ```js
 var $text = $('.emojstext');
