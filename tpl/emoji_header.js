@@ -17,5 +17,12 @@ if (typeof module === 'undefined') {
   module.exports = jEmoji;
 }
 
-// Unified: [unified_unicode, title, classname, DoCoMo, KDDI, Softbank, Google]'
+/**
+ * Emoji code map.
+ *
+ * format: 
+ *   Unified: [unified_unicode, title, classname, DoCoMo, KDDI, Softbank, Google]'
+ * 
+ * @type {Object}
+ */
 var EMOJI_MAP = {

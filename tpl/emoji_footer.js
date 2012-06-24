@@ -1,5 +1,11 @@
 var EMOJI_RE = new RegExp('(' + Object.keys(EMOJI_MAP).join('|') + ')', 'g');
 
+/**
+ * Convert unified code to HTML.
+ * 
+ * @param {String} text
+ * @return {String} html with emoji classname.
+ */
 function unifiedToHTML(text) {
   return text.replace(EMOJI_RE, function (_, m) {
     var em = EMOJI_MAP[m];
@@ -29,6 +35,12 @@ var EMOJI_KDDI_RE = new RegExp('(' + Object.keys(EMOJI_KDDI_MAP).join('|') + ')'
 var EMOJI_SOFTBANK_RE = new RegExp('(' + Object.keys(EMOJI_SOFTBANK_MAP).join('|') + ')', 'g');
 var EMOJI_GOOGLE_RE = new RegExp('(' + Object.keys(EMOJI_GOOGLE_MAP).join('|') + ')', 'g');
 
+/**
+ * Convert DoCoMo code to Unified code.
+ *
+ * @param {String} text
+ * @return {String}
+ */
 function docomoToUnified(text) {
   return text.replace(EMOJI_DOCOMO_RE, function (_, m) {
     return EMOJI_DOCOMO_MAP[m];
@@ -36,6 +48,12 @@ function docomoToUnified(text) {
 }
 jEmoji.docomoToUnified = docomoToUnified;
 
+/**
+ * Convert KDDI code to Unified code.
+ *
+ * @param {String} text
+ * @return {String}
+ */
 function kddiToUnified(text) {
   return text.replace(EMOJI_KDDI_RE, function (_, m) {
     return EMOJI_KDDI_MAP[m];
@@ -43,6 +61,12 @@ function kddiToUnified(text) {
 }
 jEmoji.kddiToUnified = kddiToUnified;
 
+/**
+ * Convert SoftBank code to Unified code.
+ *
+ * @param {String} text
+ * @return {String}
+ */
 function softbankToUnified(text) {
   return text.replace(EMOJI_SOFTBANK_RE, function (_, m) {
     return EMOJI_SOFTBANK_MAP[m];
@@ -50,6 +74,12 @@ function softbankToUnified(text) {
 }
 jEmoji.softbankToUnified = softbankToUnified;
 
+/**
+ * Convert Google code to Unified code.
+ *
+ * @param {String} text
+ * @return {String}
+ */
 function googleToUnified(text) {
   return text.replace(EMOJI_GOOGLE_RE, function (_, m) {
     return EMOJI_GOOGLE_MAP[m];
