@@ -3,14 +3,17 @@
 
 # install pyquery first: $ sudo easy_install pyquery
 
+import os
 from pyquery import PyQuery as pq
 
+project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # d = pq(url='https://raw.github.com/iamcal/php-emoji/master/table.htm')
-d = pq(open('./table.htm', 'rb').read())
+d = pq(open(project_dir + '/table.htm', 'rb').read())
 
 tr = d('table tr')
 
-content = open('emoji_header.js', 'rb').read().decode('utf-8')
+content = open(project_dir + '/tpl/emoji_header.js', 'rb').read().decode('utf-8')
 
 for tre in tr[1:]:
     tds = pq(tre)('td')
@@ -48,8 +51,8 @@ for tre in tr[1:]:
 
 content = content[:-2] + u'\n};\n\n'
 
-content += open('emoji_footer.js', 'rb').read().decode('utf-8')
+content += open(project_dir + '/tpl/emoji_footer.js', 'rb').read().decode('utf-8')
 
-f = open('emoji.js', 'wb')
+f = open(project_dir + '/emoji.js', 'wb')
 f.write(content.encode('utf-8'))
 f.close()

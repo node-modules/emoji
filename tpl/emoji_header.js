@@ -10,8 +10,6 @@
 
 (function () {
 
-"use strict";
-
 var jEmoji = {};
 if (typeof module === 'undefined') {
   window.jEmoji = jEmoji;

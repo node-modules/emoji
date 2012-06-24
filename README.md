@@ -36,8 +36,8 @@ console.log('😜', emoji.unifiedToHTML('😜'));
 
 Source data come from [php-emoji](https://github.com/iamcal/php-emoji).
 
-Run `[bin/syncdata.sh](https://github.com/fengmk2/emoji/blob/master/bin/syncdata.sh)` script, will keep `[iphone_emoji.png](https://github.com/fengmk2/emoji/blob/master/iphone_emoji.png)`, `[emoji.css](https://github.com/fengmk2/emoji/blob/master/emoji.css)`, `table.html` update.
-And it will create `[emoji.js](https://github.com/fengmk2/emoji/blob/master/emoji.js)` from `[table.html](https://github.com/fengmk2/emoji/blob/master/table.htm)`.
+Run [bin/syncdata.sh](https://github.com/fengmk2/emoji/blob/master/bin/syncdata.sh) script, will keep [iphone_emoji.png](https://github.com/fengmk2/emoji/blob/master/iphone_emoji.png), [emoji.css](https://github.com/fengmk2/emoji/blob/master/emoji.css), `table.html` update.
+And it will create [emoji.js](https://github.com/fengmk2/emoji/blob/master/emoji.js) from [table.html](https://github.com/fengmk2/emoji/blob/master/table.htm).
 
 ```sh
 sh ./bin/syncdata.sh
