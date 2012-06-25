@@ -3,6 +3,8 @@ emoji
 
 [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji)
 
+This library allows the handling and conversion of Emoji in `Javascript`.
+
 ## Usage
 
 ### Browser
@@ -44,8 +46,8 @@ jscoverage: [**98%**](http://fengmk2.github.com/coverage/emoji.html)
 
 Source data come from [php-emoji](https://github.com/iamcal/php-emoji).
 
-Run [bin/syncdata.sh](https://github.com/fengmk2/emoji/blob/master/bin/syncdata.sh) script, will keep [iphone_emoji.png](https://github.com/fengmk2/emoji/blob/master/iphone_emoji.png), [emoji.css](https://github.com/fengmk2/emoji/blob/master/emoji.css), `table.html` update.
-And it will create [emoji.js](https://github.com/fengmk2/emoji/blob/master/emoji.js) from [table.html](https://github.com/fengmk2/emoji/blob/master/table.htm).
+Run [bin/syncdata.sh](https://github.com/fengmk2/emoji/blob/master/bin/syncdata.sh) script, will keep [iphone_emoji.png](https://github.com/fengmk2/emoji/blob/master/lib/iphone_emoji.png), [emoji.css](https://github.com/fengmk2/emoji/blob/master/lib/emoji.css), `table.html` update.
+And it will create [emoji.js](https://github.com/fengmk2/emoji/blob/master/lib/emoji.js) from [table.html](https://github.com/fengmk2/emoji/blob/master/lib/table.htm).
 
 ```sh
 sh ./bin/syncdata.sh
