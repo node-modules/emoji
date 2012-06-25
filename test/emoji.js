@@ -102,7 +102,7 @@ describe('emoji.js', function () {
     });
 
     it('should not covert normal string', function () {
-      var text = 'I am not Google string...🌑';
+      var text = 'I am not Google string...';
       emoji.googleToUnified(text).should.equal(text);
     });
   });
