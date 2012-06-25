@@ -3,10 +3,9 @@ TESTTIMEOUT = 1000
 REPORTER = dot
 
 complie:
-	@-pip install pyquery --use-mirrors
 	@python bin/create_emoji_js.py
 
-test: complie
+test:
 	@NODE_ENV=test ./node_modules/.bin/mocha -R $(REPORTER) --timeout $(TESTTIMEOUT) $(TESTS)
 
 test-cov: lib-cov
