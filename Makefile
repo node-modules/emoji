@@ -3,6 +3,7 @@ TESTTIMEOUT = 1000
 REPORTER = dot
 
 complie:
+	@-pip install pyquery --use-mirrors
 	@python bin/create_emoji_js.py
 
 test: complie
