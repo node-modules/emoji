@@ -1,0 +1,1 @@
+module.exports = process.env.EMOJI_COV ? require('./lib-cov/emoji') : require('./lib/emoji');

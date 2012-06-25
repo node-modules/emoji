@@ -1,6 +1,8 @@
 emoji
 =====
 
+[![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji)
+
 ## Usage
 
 ### Browser
@@ -21,8 +23,6 @@ $text.html(jEmoji.unifiedToHTML(html));
 
 ### Nodejs
 
-#### Install
-
 ```sh
 $ npm install emoji
 ```
@@ -31,6 +31,14 @@ $ npm install emoji
 var emoji = require('emoji');
 console.log('😜', emoji.unifiedToHTML('😜'));
 ```
+
+test on nodejs:
+
+```bash
+$ make test
+```
+
+jscoverage: [**98%**](http://fengmk2.github.com/coverage/emoji.html)
 
 ## Sync data
 

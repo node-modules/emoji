@@ -25,4 +25,4 @@ if (typeof module === 'undefined') {
  * 
  * @type {Object}
  */
-var EMOJI_MAP = {
+var EMOJI_MAP = jEmoji.EMOJI_MAP = {

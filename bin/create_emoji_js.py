@@ -9,7 +9,7 @@ from pyquery import PyQuery as pq
 project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # d = pq(url='https://raw.github.com/iamcal/php-emoji/master/table.htm')
-d = pq(open(project_dir + '/table.htm', 'rb').read())
+d = pq(open(project_dir + '/lib/table.htm', 'rb').read())
 
 tr = d('table tr')
 
@@ -53,6 +53,6 @@ content = content[:-2] + u'\n};\n\n'
 
 content += open(project_dir + '/tpl/emoji_footer.js', 'rb').read().decode('utf-8')
 
-f = open(project_dir + '/emoji.js', 'wb')
+f = open(project_dir + '/lib/emoji.js', 'wb')
 f.write(content.encode('utf-8'))
 f.close()

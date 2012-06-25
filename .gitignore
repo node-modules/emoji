@@ -1,4 +1,6 @@
 lib-cov
+coverage.html
+.DS_Store
 *.seed
 *.log
 *.csv

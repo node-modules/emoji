@@ -1,5 +1,19 @@
-var EMOJI_RE = null;
 
+/**
+ * Create map keys rexgep, keys sort by key's length desc.
+ * 
+ * @param {Object} map
+ * @return {RegExp}
+ */
+function _createRegexp(map) {
+  var keys = Object.keys(map);
+  keys.sort(function (a, b) {
+    return b.length - a.length;
+  });
+  return new RegExp('(' + keys.join('|') + ')', 'g');
+}
+
+var EMOJI_RE = null;
 /**
  * Convert unified code to HTML.
  * 
@@ -8,7 +22,7 @@ var EMOJI_RE = null;
  */
 function unifiedToHTML(text) {
   if (!EMOJI_RE) {
-    EMOJI_RE = new RegExp('(' + Object.keys(EMOJI_MAP).join('|') + ')', 'g');
+    EMOJI_RE = _createRegexp(EMOJI_MAP);
   }
   return text.replace(EMOJI_RE, function (_, m) {
     var em = EMOJI_MAP[m];
@@ -26,10 +40,12 @@ for (var k in EMOJI_MAP) {
   var em = EMOJI_MAP[k];
   for (var i = 0; i < _maps.length; i++) {
     var index = i + 3;
-    if (em[index][0] === '-') {
+    var code = em[index][0];
+    var map = _maps[i];
+    if (code === '-' || map[code]) { // use first code
       continue;
     }
-    _maps[i][em[index][0]] = k;
+    map[code] = k;
   }
 }
 
@@ -42,7 +58,7 @@ var EMOJI_DOCOMO_RE = null;
  */
 function docomoToUnified(text) {
   if (!EMOJI_DOCOMO_RE) {
-    EMOJI_DOCOMO_RE = new RegExp('(' + Object.keys(EMOJI_DOCOMO_MAP).join('|') + ')', 'g');
+    EMOJI_DOCOMO_RE = _createRegexp(EMOJI_DOCOMO_MAP);
   }
   return text.replace(EMOJI_DOCOMO_RE, function (_, m) {
     return EMOJI_DOCOMO_MAP[m];
@@ -59,7 +75,7 @@ var EMOJI_KDDI_RE = null;
  */
 function kddiToUnified(text) {
   if (!EMOJI_KDDI_RE) {
-    EMOJI_KDDI_RE = new RegExp('(' + Object.keys(EMOJI_KDDI_MAP).join('|') + ')', 'g')
+    EMOJI_KDDI_RE = _createRegexp(EMOJI_KDDI_MAP);
   }
   return text.replace(EMOJI_KDDI_RE, function (_, m) {
     return EMOJI_KDDI_MAP[m];
@@ -76,7 +92,7 @@ var EMOJI_SOFTBANK_RE = null;
  */
 function softbankToUnified(text) {
   if (!EMOJI_SOFTBANK_RE) {
-    EMOJI_SOFTBANK_RE = new RegExp('(' + Object.keys(EMOJI_SOFTBANK_MAP).join('|') + ')', 'g')
+    EMOJI_SOFTBANK_RE = _createRegexp(EMOJI_SOFTBANK_MAP);
   }
   return text.replace(EMOJI_SOFTBANK_RE, function (_, m) {
     return EMOJI_SOFTBANK_MAP[m];
@@ -93,7 +109,7 @@ var EMOJI_GOOGLE_RE = null;
  */
 function googleToUnified(text) {
   if (!EMOJI_GOOGLE_RE) {
-    EMOJI_GOOGLE_RE = new RegExp('(' + Object.keys(EMOJI_GOOGLE_MAP).join('|') + ')', 'g')
+    EMOJI_GOOGLE_RE = _createRegexp(EMOJI_GOOGLE_MAP);
   }
   return text.replace(EMOJI_GOOGLE_RE, function (_, m) {
     return EMOJI_GOOGLE_MAP[m];
