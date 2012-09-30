@@ -1,5 +1,9 @@
+0.1.2 / 2012-10-01
+==================
 
-0.1.2 / 2012-10-01 
+  * change require to support browserify
+
+0.1.1 / 2012-06-25
 ==================
 
   * add 0.4 for travis test
@@ -17,3 +21,8 @@
   * add demo url
   * add emoji.js
   * Initial commit
+
+0.1.0 / 2012-06-24
+==================
+
+  * init
