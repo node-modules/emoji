@@ -11,7 +11,7 @@
  */
 
 var should = require('should');
-var emoji = require('../');
+var emoji = process.env.EMOJI_COV ? require('../lib-cov/emoji') : require('../lib/emoji');
 
 describe('emoji.js', function () {
 

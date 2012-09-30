@@ -1,0 +1,4 @@
+lib-cov/
+test/
+coverage.html
+test_results.md

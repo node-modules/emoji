@@ -2,7 +2,7 @@
   "author": "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com/)",
   "name": "emoji",
   "description": "This library allows the handling and conversion of Emoji in Javascript.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/fengmk2/emoji",
   "repository": {
     "type": "git",
