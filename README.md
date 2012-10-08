@@ -1,7 +1,7 @@
-emoji
+emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji)
 =====
 
-[![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji)
+![logo](https://raw.github.com/fengmk2/emoji/master/logo.png)
 
 This library allows the handling and conversion of Emoji in `Javascript`.
 
