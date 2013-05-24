@@ -1,3 +1,16 @@
+
+0.2.0 / 2013-05-24 
+==================
+
+  * use blanket instead of jscover
+  * support requireJS-like module definition @johnyb #2
+  * Merge pull request #3 from johnyb/update_icons
+  * update all the files to a new version
+  * point image-map to new url
+  * update component.json
+  * add bower support
+  * add logo
+  * add logo
 0.1.2 / 2012-10-01
 ==================
 
