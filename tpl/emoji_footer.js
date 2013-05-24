@@ -117,4 +117,6 @@ function googleToUnified(text) {
 }
 jEmoji.googleToUnified = googleToUnified;
 
-})();
+return jEmoji;
+
+});
