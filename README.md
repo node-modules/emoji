@@ -23,6 +23,38 @@ var html = $text.html().trim().replace(/\n/g, '<br/>');
 $text.html(jEmoji.unifiedToHTML(html));
 ```
 
+#### Seajs
+
+```js
+seajs.config({
+  alias: {
+    emoji: 'https://raw.github.com/fengmk2/emoji/master/lib/emoji.js'
+  }
+});
+
+seajs.use(['emoji'], function (emoji) {
+  // TODO
+});
+// or
+define('test', function (require, exports, modules) {
+  var emoji = require('emoji');
+});
+```
+
+#### RequireJS (AMD)
+
+```js
+require.config({
+  paths: {
+    emoji: 'https://raw.github.com/fengmk2/emoji/master/lib/emoji.js'
+  }
+});
+
+require(['emoji'], function (emoji) {
+  // TODO
+});
+```
+
 ### Nodejs
 
 ```sh
