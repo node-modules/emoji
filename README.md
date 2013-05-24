@@ -40,7 +40,7 @@ test on nodejs:
 $ make test
 ```
 
-jscoverage: [**98%**](http://fengmk2.github.com/coverage/emoji.html)
+jscoverage: [**96%**](http://fengmk2.github.com/coverage/emoji.html)
 
 ## Sync data
 

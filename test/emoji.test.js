@@ -1,6 +1,6 @@
 /*!
  * emoji - test/emoji.js
- * Copyright(c) 2012 fengmk2 <fengmk2@gmail.com>
+ * Copyright(c) 2012 -2013 fengmk2 <fengmk2@gmail.com>
  * MIT Licensed
  */
 
@@ -11,7 +11,7 @@
  */
 
 var should = require('should');
-var emoji = process.env.EMOJI_COV ? require('../lib-cov/emoji') : require('../lib/emoji');
+var emoji = require('../');
 
 describe('emoji.js', function () {
 

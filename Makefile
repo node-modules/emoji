@@ -1,27 +1,27 @@
-TESTS = test/*.js
+TESTS = test/*.test.js
 TESTTIMEOUT = 1000
 REPORTER = dot
+MOCHA_OPTS =
 
 complie:
 	@python bin/create_emoji_js.py
 
-test:
-	@NODE_ENV=test ./node_modules/.bin/mocha -R $(REPORTER) --timeout $(TESTTIMEOUT) $(TESTS)
+install:
+	@npm install
 
-test-cov: lib-cov
-	@EMOJI_COV=1 $(MAKE) test REPORTER=progress
-	@EMOJI_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
-	@$(MAKE) test-results
+test: install
+	@NODE_ENV=test ./node_modules/.bin/mocha \
+		-R $(REPORTER) \
+		--timeout $(TESTTIMEOUT) \
+		$(MOCHA_OPTS) \
+		$(TESTS)
 
-test-results:
-	@$(MAKE) test REPORTER=markdown > test_results.md
-
-lib-cov:
-	@rm -rf ./$@
-	@jscoverage lib $@
-
-clean:
-	@rm -rf lib-cov
+test-cov:
 	@rm -f coverage.html
+	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
+	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
+	@ls -lh coverage.html
 
-.PHONY: complie test test-cov clean lib-cov test-results
+test-all: test test-cov
+
+.PHONY: complie test test-cov test-all
