@@ -39,3 +39,7 @@ var jEmoji = {};
  * @type {Object}
  */
 var EMOJI_MAP = jEmoji.EMOJI_MAP = {
+  // missing
+  "👬": ["U+1F46C", "man and man holding hands", "1f46c", ["-", "-"], ["-", "-"], ["", "U+E428"], ["󾆠", "U+FE1A0"]],
+  "👭": ["U+1F46D", "woman and woman holding hands", "1f46d", ["-", "-"], ["-", "-"], ["", "U+E428"], ["󾆠", "U+FE1A0"]],
+  // table.html
