@@ -63,7 +63,7 @@ $ npm install emoji
 
 ```js
 var emoji = require('emoji');
-console.log('😜', emoji.unifiedToHTML('😜'));
+console.log('😎', emoji.unifiedToHTML('😎'));
 ```
 
 test on nodejs:
@@ -88,6 +88,19 @@ sh ./bin/syncdata.sh
 ## Authors
 
 Missing emoji support by: Nariman Haghighi <auspicious@gmail.com>.
+
+```bash
+$ git summary 
+
+ project  : emoji
+ repo age : 12 months
+ active   : 10 days
+ commits  : 34
+ files    : 23
+ authors  : 
+    32  fengmk2                 94.1%
+     2  Julian Bäume           5.9%
+```
 
 ## License 
 
