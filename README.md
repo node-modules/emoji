@@ -85,6 +85,10 @@ And it will create [emoji.js](https://github.com/fengmk2/emoji/blob/master/lib/e
 sh ./bin/syncdata.sh
 ```
 
+## Authors
+
+Missing emoji support by: Nariman Haghighi <auspicious@gmail.com>.
+
 ## License 
 
 (The MIT License)

@@ -6,6 +6,9 @@ MOCHA_OPTS =
 complie:
 	@python bin/create_emoji_js.py
 
+sync:
+	@sh bin/syncdata.sh
+
 install:
 	@npm install
 
@@ -24,4 +27,4 @@ test-cov:
 
 test-all: test test-cov
 
-.PHONY: complie test test-cov test-all
+.PHONY: complie sync test test-cov test-all
