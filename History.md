@@ -1,4 +1,11 @@
 
+0.2.1 / 2013-06-18 
+==================
+
+  * add missing emoji
+  * add seajs and requirejs
+  * rm 0.6 from travis
+
 0.2.0 / 2013-05-24 
 ==================
 
