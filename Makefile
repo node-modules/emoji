@@ -1,6 +1,6 @@
 TESTS = test/*.test.js
 TESTTIMEOUT = 1000
-REPORTER = dot
+REPORTER = spec
 MOCHA_OPTS =
 
 complie:
@@ -27,4 +27,9 @@ test-cov:
 
 test-all: test test-cov
 
-.PHONY: complie sync test test-cov test-all
+test-coveralls:
+	@$(MAKE) test
+	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
+	@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
+
+.PHONY: complie sync test test-cov test-all test-coveralls

@@ -1,4 +1,4 @@
-emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji)
+emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji) [![Coverage Status](https://coveralls.io/repos/fengmk2/emoji/badge.png)](https://coveralls.io/r/fengmk2/emoji)
 =====
 
 ![logo](https://raw.github.com/fengmk2/emoji/master/logo.png)
@@ -99,14 +99,14 @@ $ git summary
  files    : 23
  authors  : 
     32  fengmk2                 94.1%
-     2  Julian Bäume           5.9%
+     2  Julian Baume           5.9%
 ```
 
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2012 fengmk2 <fengmk2@gmail.com>.
+Copyright (c) 2012 - 2013 fengmk2 <fengmk2@gmail.com>.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

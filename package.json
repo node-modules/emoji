@@ -26,6 +26,8 @@
     "mocha": "*",
     "blanket": "*",
     "travis-cov": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter": "*",
     "should": "*"
   },
   "engines": {
