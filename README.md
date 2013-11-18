@@ -1,6 +1,8 @@
 emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji) [![Coverage Status](https://coveralls.io/repos/fengmk2/emoji/badge.png)](https://coveralls.io/r/fengmk2/emoji)
 =====
 
+[![NPM](https://nodei.co/npm/emoji.png?downloads=true&stars=true)](https://nodei.co/npm/emoji/)
+
 ![logo](https://raw.github.com/fengmk2/emoji/master/logo.png)
 
 This library allows the handling and conversion of Emoji in `Javascript`.
@@ -90,19 +92,19 @@ sh ./bin/syncdata.sh
 Missing emoji support by: Nariman Haghighi <auspicious@gmail.com>.
 
 ```bash
-$ git summary 
+$ git summary
 
  project  : emoji
  repo age : 12 months
  active   : 10 days
  commits  : 34
  files    : 23
- authors  : 
+ authors  :
     32  fengmk2                 94.1%
      2  Julian Baume           5.9%
 ```
 
-## License 
+## License
 
 (The MIT License)
 
