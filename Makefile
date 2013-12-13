@@ -10,7 +10,7 @@ sync:
 	@sh bin/syncdata.sh
 
 install:
-	@npm install
+	@npm install --registry=http://registry.cnpmjs.org --cache=${HOME}/.npm/.cache/cnpm
 
 test: install
 	@NODE_ENV=test ./node_modules/.bin/mocha \
@@ -19,11 +19,13 @@ test: install
 		$(MOCHA_OPTS) \
 		$(TESTS)
 
-test-cov:
+test-cov-html:
 	@rm -f coverage.html
 	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
-	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
 	@ls -lh coverage.html
+
+test-cov: test-cov-html
+	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
 
 test-all: test test-cov
 
