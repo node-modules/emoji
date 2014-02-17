@@ -23,6 +23,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "contributors": "*",
     "mocha": "*",
     "blanket": "*",
     "travis-cov": "*",
