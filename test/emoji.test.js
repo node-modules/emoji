@@ -107,4 +107,17 @@ describe('emoji.js', function () {
     });
   });
 
+  var regular_expressions = [
+    'EMOJI_RE',
+    'EMOJI_DOCOMO_RE',
+    'EMOJI_KDDI_RE',
+    'EMOJI_SOFTBANK_RE',
+    'EMOJI_GOOGLE_RE'
+  ];
+
+  regular_expressions.forEach(function (re) {
+    it(re + ' should be a regular expression', function () {
+      emoji[re].should.be.a.RegExp;
+    });
+  });
 });
