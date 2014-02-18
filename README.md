@@ -13,10 +13,12 @@ This library allows the handling and conversion of Emoji in `Javascript`.
 
 see [demo.html](http://fengmk2.github.com/emoji/)
 
+Use [staticfile.org](http://www.staticfile.org/) CDN:
+
 ```html
-<link href="./emoji.css" rel="stylesheet" type="text/css" />
-<script src="./jquery.js"></script>
-<script src="./emoji.js"></script>
+<link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
 ```
 
 ```js
@@ -30,7 +32,7 @@ $text.html(jEmoji.unifiedToHTML(html));
 ```js
 seajs.config({
   alias: {
-    emoji: 'https://raw.github.com/fengmk2/emoji/master/lib/emoji.js'
+    emoji: 'http://cdn.staticfile.org/emoji/0.2.2/emoji.js'
   }
 });
 
@@ -48,7 +50,7 @@ define('test', function (require, exports, modules) {
 ```js
 require.config({
   paths: {
-    emoji: 'https://raw.github.com/fengmk2/emoji/master/lib/emoji.js'
+    emoji: 'http://cdn.staticfile.org/emoji/0.2.2/emoji.js'
   }
 });
 
@@ -73,8 +75,6 @@ test on nodejs:
 ```bash
 $ make test
 ```
-
-jscoverage: [**96%**](http://fengmk2.github.com/coverage/emoji.html)
 
 ## Sync data
 
