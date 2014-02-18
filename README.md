@@ -92,17 +92,18 @@ sh ./bin/syncdata.sh
 Missing emoji support by: Nariman Haghighi <auspicious@gmail.com>.
 
 ```bash
-git summary
+$ git summary
 
  project  : emoji
  repo age : 1 year, 8 months
  active   : 16 days
- commits  : 41
+ commits  : 47
  files    : 24
  authors  :
-    38  fengmk2                 92.7%
-     2  Julian Bäume           4.9%
-     1  pachtymichuk            2.4%
+    41  fengmk2                 87.2%
+     3  Jonathan Ong            6.4%
+     2  Julian Bäume           4.3%
+     1  pachtymichuk            2.1%
 ```
 
 ## License

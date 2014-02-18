@@ -1,4 +1,12 @@
 
+0.3.0 / 2014-02-18 
+==================
+
+  * add simple tests for the regular expressions (@jonathanong)
+  * lazily export regular expressions (@jonathanong)
+  * clean whitespace
+  * use staticfile.org CDN
+
 0.2.2 / 2014-02-18 
 ==================
 
