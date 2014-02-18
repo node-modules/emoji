@@ -1,4 +1,4 @@
-.emoji { background: url("emoji.png") top left no-repeat; width: 20px; height: 20px; display: -moz-inline-stack; display: inline-block; vertical-align: top; zoom: 1; *display: inline; }
+.emoji { background: url("emoji.png?v=0.2.2") top left no-repeat; width: 20px; height: 20px; display: -moz-inline-stack; display: inline-block; vertical-align: top; zoom: 1; *display: inline; }
 .emoji2600 { background-position: -500px -120px; }
 .emoji2601 { background-position: -500px -140px; }
 .emoji2614 { background-position: -500px -200px; }

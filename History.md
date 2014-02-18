@@ -1,4 +1,13 @@
 
+0.2.2 / 2014-02-18 
+==================
+
+  * add AUTHORS
+  * sprite sheet is optimized (@pachtymichuk)
+  * add npm image
+  * support coveralls
+  * update faces
+
 0.2.1 / 2013-06-18 
 ==================
 
