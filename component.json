@@ -3,17 +3,15 @@
   "name": "emoji",
   "description": "This library allows the handling and conversion of Emoji in Javascript.",
   "version": "0.3.0",
-  "homepage": "https://github.com/fengmk2/emoji",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/fengmk2/emoji.git"
-  },
-  "main": [
-    "./lib/emoji.js",
-    "./lib/emoji.css",
-    "./lib/emoji.png"
+  "repo": "fengmk2/emoji",
+  "main": "lib/emoji.js",
+  "scripts": [
+      "lib/emoji.js"
   ],
-  "dependencies": {
-    "jquery": ">=1.7.0"
-  }
+  "styles": [
+    "lib/emoji.css"
+  ],
+  "images": [
+    "lib/emoji.png"
+  ]
 }
