@@ -1,4 +1,15 @@
 
+0.3.1 / 2014-02-19 
+==================
+
+  * add missing css to tpl
+  * a few emojies tht got missed (@pachtymichuk)
+  * added missing transport and smiling emojies
+  * Update component.json (@jonathanong)
+  * fixed horse racer - oops mixed them up with trophy
+  * generated emoji.js
+  * added missing emojis
+
 0.3.0 / 2014-02-18 
 ==================
 
