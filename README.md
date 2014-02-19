@@ -13,7 +13,7 @@ This library allows the handling and conversion of Emoji in `Javascript`.
 
 see [demo.html](http://fengmk2.github.com/emoji/)
 
-Use [staticfile.org](http://www.staticfile.org/) CDN:
+Use [staticfile.org](http://www.staticfile.org/index_en.html) CDN:
 
 ```html
 <link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
