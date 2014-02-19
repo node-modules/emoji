@@ -96,14 +96,14 @@ $ git summary
 
  project  : emoji
  repo age : 1 year, 8 months
- active   : 16 days
- commits  : 47
+ active   : 17 days
+ commits  : 56
  files    : 24
  authors  :
-    41  fengmk2                 87.2%
-     3  Jonathan Ong            6.4%
-     2  Julian Bäume           4.3%
-     1  pachtymichuk            2.1%
+    44  fengmk2                 78.6%
+     6  pachtymichuk            10.7%
+     4  Jonathan Ong            7.1%
+     2  Julian Bäume           3.6%
 ```
 
 ## License
