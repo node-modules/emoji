@@ -1,4 +1,10 @@
 
+0.3.2 / 2014-02-20 
+==================
+
+  * compatibility with older browsers (IE namely) (@crcn)
+  * update staticfile.org to English home page
+
 0.3.1 / 2014-02-19 
 ==================
 

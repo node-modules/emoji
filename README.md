@@ -89,21 +89,22 @@ sh ./bin/syncdata.sh
 
 ## Authors
 
-Missing emoji support by: Nariman Haghighi <auspicious@gmail.com>.
+Missing emojis support by: Nariman Haghighi <auspicious@gmail.com> and Jonathan Ong <jonathanrichardong@gmail.com>.
 
 ```bash
 $ git summary
 
  project  : emoji
  repo age : 1 year, 8 months
- active   : 17 days
- commits  : 56
+ active   : 18 days
+ commits  : 61
  files    : 24
  authors  :
-    44  fengmk2                 78.6%
-     6  pachtymichuk            10.7%
-     4  Jonathan Ong            7.1%
-     2  Julian Bäume           3.6%
+    48  fengmk2                 78.7%
+     6  pachtymichuk            9.8%
+     4  Jonathan Ong            6.6%
+     2  Julian Bäume           3.3%
+     1  Craig Condon            1.6%
 ```
 
 ## License

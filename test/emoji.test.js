@@ -1,6 +1,6 @@
 /*!
  * emoji - test/emoji.js
- * Copyright(c) 2012 -2013 fengmk2 <fengmk2@gmail.com>
+ * Copyright(c) 2012 -2014 fengmk2 <fengmk2@gmail.com>
  * MIT Licensed
  */
 
@@ -116,8 +116,8 @@ describe('emoji.js', function () {
   ];
 
   regular_expressions.forEach(function (re) {
-    it(re + ' should be a regular expression', function () {
-      emoji[re].should.be.a.RegExp;
+    it(re + ' should be a Function', function () {
+      emoji[re].should.be.a.Function;
     });
   });
 });
