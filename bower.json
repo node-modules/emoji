@@ -1,0 +1,26 @@
+{
+  "name": "emoji",
+  "version": "0.3.2",
+  "homepage": "https://github.com/fengmk2/emoji",
+  "authors": [
+    "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": "lib/emoji.js",
+  "scripts": [
+      "lib/emoji.js"
+  ],
+  "styles": [
+    "lib/emoji.css"
+  ],
+  "images": [
+    "lib/emoji.png"
+  ]
+}
