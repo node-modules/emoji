@@ -10,7 +10,7 @@ sync:
 	@sh bin/syncdata.sh
 
 install:
-	@npm install --registry=http://registry.cnpmjs.org --cache=${HOME}/.npm/.cache/cnpm
+	@npm install --registry=http://registry.npm.taobao.org
 
 test: install
 	@NODE_ENV=test ./node_modules/.bin/mocha \
