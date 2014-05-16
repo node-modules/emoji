@@ -1,4 +1,4 @@
-emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji) [![Coverage Status](https://coveralls.io/repos/fengmk2/emoji/badge.png)](https://coveralls.io/r/fengmk2/emoji)
+emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji) [![Coverage Status](https://coveralls.io/repos/fengmk2/emoji/badge.png)](https://coveralls.io/r/fengmk2/emoji) [![spm package](http://spmjs.io/badge/emoji)](http://spmjs.io/package/emoji)
 =====
 
 [![NPM](https://nodei.co/npm/emoji.png?downloads=true&stars=true)](https://nodei.co/npm/emoji/)
