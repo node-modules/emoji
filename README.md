@@ -1,9 +1,13 @@
-emoji [![Build Status](https://secure.travis-ci.org/fengmk2/emoji.png)](http://travis-ci.org/fengmk2/emoji) [![Coverage Status](https://coveralls.io/repos/fengmk2/emoji/badge.png)](https://coveralls.io/r/fengmk2/emoji) [![spm package](http://spmjs.io/badge/emoji)](http://spmjs.io/package/emoji)
+emoji
 =====
+
+[![Build Status](https://secure.travis-ci.org/node-modules/emoji.png)](http://travis-ci.org/node-modules/emoji)
+[![Coverage Status](https://coveralls.io/repos/node-modules/emoji/badge.png)](https://coveralls.io/r/node-modules/emoji)
+[![spm package](http://spmjs.io/badge/emoji)](http://spmjs.io/package/emoji)
 
 [![NPM](https://nodei.co/npm/emoji.png?downloads=true&stars=true)](https://nodei.co/npm/emoji/)
 
-![logo](https://raw.github.com/fengmk2/emoji/master/logo.png)
+![logo](https://raw.github.com/node-modules/emoji/master/logo.png)
 
 This library allows the handling and conversion of Emoji in `Javascript`.
 
@@ -80,8 +84,11 @@ $ make test
 
 Source data come from [php-emoji](https://github.com/iamcal/php-emoji).
 
-Run [bin/syncdata.sh](https://github.com/fengmk2/emoji/blob/master/bin/syncdata.sh) script, will keep [emoji.png](https://github.com/fengmk2/emoji/blob/master/lib/emoji.png), [emoji.css](https://github.com/fengmk2/emoji/blob/master/lib/emoji.css), `table.html` update.
-And it will create [emoji.js](https://github.com/fengmk2/emoji/blob/master/lib/emoji.js) from [table.html](https://github.com/fengmk2/emoji/blob/master/lib/table.htm).
+Run [bin/syncdata.sh](https://github.com/node-modules/emoji/blob/master/bin/syncdata.sh) script,
+will keep [emoji.png](https://github.com/node-modules/emoji/blob/master/lib/emoji.png),
+[emoji.css](https://github.com/node-modules/emoji/blob/master/lib/emoji.css), `table.html` update.
+And it will create [emoji.js](https://github.com/node-modules/emoji/blob/master/lib/emoji.js)
+from [table.html](https://github.com/node-modules/emoji/blob/master/lib/table.htm).
 
 ```sh
 sh ./bin/syncdata.sh

@@ -3,10 +3,10 @@
   "name": "emoji",
   "description": "This library allows the handling and conversion of Emoji in Javascript.",
   "version": "0.3.2",
-  "homepage": "https://github.com/fengmk2/emoji",
+  "homepage": "https://github.com/node-modules/emoji",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fengmk2/emoji.git"
+    "url": "git://github.com/node-modules/emoji.git"
   },
   "main": "index.js",
   "scripts": {
