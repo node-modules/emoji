@@ -19,20 +19,10 @@ test: install
 		$(MOCHA_OPTS) \
 		$(TESTS)
 
-test-cov-html:
-	@rm -f coverage.html
-	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=html-cov > coverage.html
-	@ls -lh coverage.html
-
-test-cov: test-cov-html
+test-cov:
 	@EMOJI_COV=1 $(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=travis-cov
 
-test-all: test test-cov
-
-test-coveralls:
-	@$(MAKE) test
-	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
-	-@$(MAKE) test MOCHA_OPTS='--require blanket' REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
+test-all: test
 
 contributors: install
 	@./node_modules/.bin/contributors -f plain -o AUTHORS

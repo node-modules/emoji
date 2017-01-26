@@ -12,14 +12,6 @@
   "scripts": {
     "test": "make test-all"
   },
-  "config": {
-    "blanket": {
-      "pattern": "emoji/lib"
-    },
-    "travis-cov": {
-      "threshold": 95
-    }
-  },
   "dependencies": {},
   "devDependencies": {
     "contributors": "*",
