@@ -30,6 +30,12 @@
 
 var jEmoji = {};
 
+if(window && typeof window.define === "function"){
+    define([], function(){
+        return jEmoji;
+    });
+}
+
 /**
  * Emoji code map.
  *
